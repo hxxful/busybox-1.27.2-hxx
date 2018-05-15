@@ -8,5 +8,5 @@ echo "**********I am initramfs's init***************"
 mount -t sysfs sysfs /sys
 mount -t proc proc /proc
 mdev -s
-mount /dev/mmcblk1p2 /mnt
+mount /dev/mmcblk0p2 /mnt
 exec switch_root /mnt /sbin/init
