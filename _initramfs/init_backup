@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "**********I am initramfs's init***************"
+[ -d sys  ] || mkdir sys
+[ -d proc ] || mkdir proc
+[ -d dev  ] || mkdir dev
+[ -d mnt  ] || mkdir mnt
+
+mount -t sysfs sysfs /sys
+mount -t proc proc /proc
+#mdev -s
+#mount /dev/mmcblk0p2 /mnt
+#exec switch_root /mnt /sbin/init
